@@ -1,30 +1,9 @@
 const path = {
-  ALL: "*",
-  ROOT: "/",
-  SIGNIN: "/sign-in",
-  MAIN_CATEGORY: "/main-category",
-  SUB_CATEGORY: "/sub-category",
-  DETAIL_CATEGORY: "/detail-category",
-  ORDER: "/order",
-  CONTRACT: "/contract",
-  ORDER_REPORT: "/order-report",
-  PRODUCT_REPORT: "/product-report",
-  CUSTOMER_REPORT: "/customer-report",
-  FACTORY: "/factory",
-  UNIT: "/unit",
-  PRODUCT: "/product",
-  PROMOTION: "/promotion",
-  PRODUCT_PRICE: "/product-price",
-  WAREHOUSE: "/warehouse",
-  PALLET: "/pallet",
-  RACK: "/rack",
-  CUSTOMER: "/customer",
-  CUSTOMER_ROUTE: "/customer-route",
-  DISTRIBUTOR: "/distributor",
-  BRAND: "/brand",
-  SUPPLIER: "/supplier",
-  USER: "/user",
-  PROFILE: "/profile",
-};
-
-export default path;
+    ALL: "*",
+    ROOT: "/",
+    SIGNIN: "/sign-in",
+    RegisterCourse: "/RegisterCourse",
+  };
+  
+  export default path;
+  

@@ -4,11 +4,7 @@ import React, { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Carousel, Image, Input, Spin } from "antd";
 import AuthApi from "apis/AuthApi";
-import {
-  background,
-  logo_pnj_logIn,
-  logo_pnj_login_right,
-} from "assets/images";
+import { background, logo_iuh } from "assets/images";
 import { useUser } from "contexts/UserProvider";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -20,7 +16,7 @@ import { IdcardOutlined, LockOutlined } from "@ant-design/icons";
 const onboards = [
   {
     title: "THƯ CHÚC TẾT 2024",
-    sologan: " ",
+    sologan: "Chúc mừng năm mới 2024, chúc mọi người năm mới an khang thịnh vượng, vạn sự như ý.",
   },
   {
     title:
@@ -37,6 +33,8 @@ const onboards = [
 
 const SignInPage = (): JSX.Element => {
   const { getUser } = useUser();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const navigate = useNavigate();
 
@@ -66,7 +64,8 @@ const SignInPage = (): JSX.Element => {
   });
 
   const onSubmit = async () => {
-    window.location.replace(process.env.REACT_APP_AWS_COGNITO_LOGIN as string);
+    window.location.replace("/");
+    // window.location.replace(process.env.REACT_APP_AWS_COGNITO_LOGIN as string);
   };
   const screenWidth = window.innerWidth;
 
@@ -158,12 +157,12 @@ const SignInPage = (): JSX.Element => {
           <Image
             height={100}
             className="object-contain mt-5"
-            src={logo_pnj_logIn}
+            src={logo_iuh}
             alt="logo"
             preview={false}
           />
           <p className="mt-5 text-3xl font-bold mb-32">
-            TRANG ĐĂNG KÝ HỌC PHẦN
+            CỔNG THÔNG TIN SINH VIÊN
           </p>
           <div className="flex flex-col items-center justify-center w-96">
             {/* Mã sinh viên*/}
@@ -219,8 +218,8 @@ const SignInPage = (): JSX.Element => {
           fontFamily: "Roboto, sans-serif",
         }}
       >
-        <p>Bản quyền 2024 - Khánh An Gia Đại Hữu Hiệp</p>
-        <p>© 2024 ASCVN. All rights reserved</p>
+        <p>Bản quyền 2024 - Khánh An_Gia Đại_Hữu Hiệp</p>
+        <p>©2024 ADHVN. All rights reserved</p>
       </div>
     </Spin>
   );
