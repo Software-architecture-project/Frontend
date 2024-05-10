@@ -1,1 +1,0 @@
-Nơi chứa các context React và trạng thái toàn cục.

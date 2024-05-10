@@ -15,7 +15,7 @@ const Avatar = () => {
   const items: MenuProps["items"] = [
     {
       key: "1",
-      label: <Link to={`${path.ROOT}`}>Tài khoản</Link>,
+      label: <Link to={`${path.PROFILE}`}>Tài khoản</Link>,
       icon: <UserOutlined />,
     },
     {

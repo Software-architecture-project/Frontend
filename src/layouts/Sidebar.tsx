@@ -1,5 +1,5 @@
 import { Button, Layout, Menu, MenuProps, Space } from "antd";
-import { logo_iuh } from "assets/images";
+import { logo_pnj_logIn } from "assets/images";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import path from "routes/Path";
@@ -41,27 +41,49 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const items: MenuItem[] = [
-    getItem("Trang chủ", `${path.ROOT}`, <PieChartOutlined />),
-
-    getItem("Thông tin chung", "category", <ProductOutlined />, [
-      getItem("Thông tin sinh viên", `${path.ROOT}`),
-      getItem("Ghi chú nhắn nhở", `${path.ROOT}`),
-      getItem("Đề xuất cập nhật thông tin", `${path.ROOT}`),
+    getItem("Dashboard", `${path.ROOT}`, <PieChartOutlined />),
+    getItem("Danh mục sản phẩm", "category", <ProductOutlined />, [
+      getItem("Danh mục chính", `${path.MAIN_CATEGORY}`),
+      getItem("Danh mục phụ", `${path.SUB_CATEGORY}`),
+      getItem("Chi tiết danh mục", `${path.DETAIL_CATEGORY}`),
     ]),
-    getItem("Học tập", "manage-order", <ShoppingCartOutlined />, [
-      getItem("Kết quả học tập", `${path.ROOT}`),
-      getItem("Lịch theo tuần", `${path.ROOT}`),
-      getItem("Lịch theo tiến độ", `${path.ROOT}`),
-      getItem("Lịch theo lớp học danh nghĩa", `${path.ROOT}`),
+    getItem("Quản lý đơn hàng", "manage-order", <ShoppingCartOutlined />, [
+      getItem("Đơn hàng", `${path.ORDER}`),
+      getItem("Hợp đồng", `${path.CONTRACT}`),
     ]),
-    getItem("Đăng ký học phần", "report", <WarningOutlined />, [
-      getItem("Chương trình khung", `${path.ROOT}`),
-      getItem("Đăng ký học phần", `${path.RegisterCourse}`),
+    getItem("Báo cáo", "report", <WarningOutlined />, [
+      getItem("Báo cáo đơn hàng", `${path.ORDER_REPORT}`),
+      getItem("Báo cáo sản phẩm", `${path.PRODUCT_REPORT}`),
+      getItem("Báo cáo khách hàng", `${path.CUSTOMER_REPORT}`),
     ]),
-    getItem("Học phí", "report", <WarningOutlined />, [
-      getItem("Tra cứu công nợ", `${path.ROOT}`),
-      getItem("Thanh toán trực tuyến", `${path.ROOT}`),
-      getItem("Phiếu thu tổng hợp", `${path.ROOT}`),
+    getItem(
+      "Sản phẩm - khuyến mãi",
+      "promotion-product",
+      <PercentageOutlined />,
+      [
+        getItem("Ngành hàng", `${path.FACTORY}`),
+        getItem("Đơn vị đo lường", `${path.UNIT}`),
+        getItem("Sản phẩm", `${path.PRODUCT}`),
+        getItem("Khuyến mãi", `${path.PROMOTION}`),
+        getItem("Cập nhật giá sản phẩm", `${path.PRODUCT_PRICE}`),
+      ]
+    ),
+    getItem("Quản lý kho vận", "manage-inventory", <DropboxOutlined />, [
+      getItem("Quản lý kho", `${path.WAREHOUSE}`),
+      getItem("Quản lý pallet", `${path.PALLET}`),
+      getItem("Quản lý kệ trong kho", `${path.RACK}`),
+    ]),
+    getItem("Quản lý khách hàng", "manage-customer", <UserOutlined />, [
+      getItem("Khách hàng", `${path.CUSTOMER}`),
+      getItem("Cập nhật tuyển khách hàng", `${path.CUSTOMER_ROUTE}`),
+    ]),
+    getItem("Quản lý đối tác", "manage-partner", <UsergroupAddOutlined />, [
+      getItem("Nhà phân phối", `${path.DISTRIBUTOR}`),
+      getItem("Đối tác", `${path.BRAND}`),
+      getItem("Nhà cung cấp", `${path.SUPPLIER}`),
+    ]),
+    getItem("System", "system", <SettingOutlined />, [
+      getItem("Quản lý tài khoản", `${path.USER}`),
     ]),
   ];
 
@@ -72,11 +94,11 @@ const Sidebar = () => {
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
     >
-      <div className="flex items-center justify-center py-5 bg-slate-600">
+      <div className="flex items-center justify-center py-5">
         <img
-          src={logo_iuh}
-          width={200}
-          height={200}
+          src={logo_pnj_logIn}
+          width={60}
+          height={60}
           alt="logo"
           className="cursor-pointer"
           onClick={() => navigate(`${path.ROOT}`)}

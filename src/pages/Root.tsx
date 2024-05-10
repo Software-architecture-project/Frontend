@@ -11,7 +11,7 @@ const Root = () => {
 
   const { Content } = Layout;
 
-  if (isToken) {
+  if (!isToken) {
     return <Navigate to={`${path.SIGNIN}`} />;
   }
  
