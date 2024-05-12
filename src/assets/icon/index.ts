@@ -7,5 +7,6 @@ export { default as download5 } from "./download (5).png";
 export { default as download6 } from "./download (6).png";
 export { default as download7 } from "./download (7).png";
 export { default as download8 } from "./download (8).png";
+export { default as printericon } from "./printer-icon.jpg";
 
 // export { default as logo_iuh } from "./logo_iuh.png";
