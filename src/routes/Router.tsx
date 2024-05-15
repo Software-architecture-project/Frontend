@@ -5,10 +5,12 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from "react-router-dom";
+
 import {
   Home,
   SignIn,
-  RegisterCourse
+  RegisterCourse,
+  Schedule,
 } from "pages";
 import path from "./Path";
 import { useUser } from "contexts/UserProvider";
@@ -26,6 +28,7 @@ const Router = () => {
         // index dùng để vào trang đầu tiên khi truy cập trang web
         { path: `${path.ROOT}`, element: <Home />, index: true },
         { path: `${path.RegisterCourse}`, element: <RegisterCourse /> },
+        { path: `${path.Schedule}`, element: <Schedule /> },
       ],
     },
     { path: `${path.SIGNIN}`, element: <SignIn /> },

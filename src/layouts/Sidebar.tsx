@@ -50,7 +50,7 @@ const Sidebar = () => {
     ]),
     getItem("Học tập", "manage-order", <ShoppingCartOutlined />, [
       getItem("Kết quả học tập", `${path.ROOT}`),
-      getItem("Lịch theo tuần", `${path.ROOT}`),
+      getItem("Lịch theo tuần", `${path.Schedule}`),
       getItem("Lịch theo tiến độ", `${path.ROOT}`),
       getItem("Lịch theo lớp học danh nghĩa", `${path.ROOT}`),
     ]),
@@ -63,6 +63,7 @@ const Sidebar = () => {
       getItem("Thanh toán trực tuyến", `${path.ROOT}`),
       getItem("Phiếu thu tổng hợp", `${path.ROOT}`),
     ]),
+
   ];
 
   return (
