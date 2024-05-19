@@ -44,24 +44,24 @@ const Sidebar = () => {
     getItem("Trang chủ", `${path.ROOT}`, <PieChartOutlined />),
 
     getItem("Thông tin chung", "category", <ProductOutlined />, [
-      getItem("Thông tin sinh viên", `${path.ROOT}`),
+      getItem("Thông tin sinh viên", `${path.GeneralInformation}`),
       getItem("Ghi chú nhắn nhở", `${path.ROOT}`),
       getItem("Đề xuất cập nhật thông tin", `${path.ROOT}`),
     ]),
     getItem("Học tập", "manage-order", <ShoppingCartOutlined />, [
-      getItem("Kết quả học tập", `${path.ROOT}`),
+      getItem("Kết quả học tập", `${path.LearningOutcomes}`),
       getItem("Lịch theo tuần", `${path.Schedule}`),
       getItem("Lịch theo tiến độ", `${path.ROOT}`),
       getItem("Lịch theo lớp học danh nghĩa", `${path.ROOT}`),
     ]),
     getItem("Đăng ký học phần", "report", <WarningOutlined />, [
-      getItem("Chương trình khung", `${path.ROOT}`),
       getItem("Đăng ký học phần", `${path.RegisterCourse}`),
+      getItem("Chương trình khung", `${path.FrameProgram}`),
     ]),
     getItem("Học phí", "report", <WarningOutlined />, [
-      getItem("Tra cứu công nợ", `${path.ROOT}`),
-      getItem("Thanh toán trực tuyến", `${path.ROOT}`),
-      getItem("Phiếu thu tổng hợp", `${path.ROOT}`),
+      getItem("Tra cứu công nợ", `${path.LookUpDebt}`),
+      getItem("Thanh toán trực tuyến", `${path.OnlinePayments}`),
+      getItem("Phiếu thu tổng hợp", `${path.GeneralReceipt}`),
     ]),
 
   ];

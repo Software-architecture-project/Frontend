@@ -525,7 +525,7 @@ thead {
 
 .table-custom thead {
   white-space: nowrap;
-  background: #f3f7f9;
+  background-color: #0c6fbe;
   border-bottom: 2px solid #cad6d8;
   color: #1da1f2;
 }
@@ -707,6 +707,8 @@ th {
   vertical-align: middle;
   text-align: center;
   padding: 16px 5px;
+  background: #0c6fbe;
+  color: #fff;
 }
 
 .table.table-bordered thead > tr > th {
@@ -1172,3 +1174,239 @@ p {
   font-weight: bolder;
   font-size: smaller;
 }
+
+#tbodyDK tr td div {
+  display: flex;
+  justify-content: center;
+}
+
+#style-Jg35F {
+  margin-left: 10px;
+}
+#rdoLoaiDangKyHocPhan {
+  font-weight: bold;
+}
+.loaiHP-red {
+  color: red;
+}
+.color-white {
+  color: white;
+}
+.selected {
+  background-color: #fff9c0; /* Màu nền mới khi được chọn */
+}
+
+tr:hover {
+  background-color: #d8e6ff;
+}
+
+.window {
+  display: none; /* Ẩn hộp thoại ban đầu */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.window.open {
+  display: block; /* Hiển thị hộp thoại khi mở */
+}
+
+#dialog {
+  padding: 1rem 3rem;
+  background: white;
+  width: 90%;
+  height: 80%;
+  padding-top: 2rem;
+  border-radius: 20px;
+  border: 0;
+  box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+  animation: fadeIn 1s ease both;
+  &::backdrop {
+    animation: fadeIn 1s ease both;
+    background: rgb(255 255 255 / 40%);
+    z-index: 2;
+    backdrop-filter: blur(20px);
+  }
+  .x {
+    font-size: 30px;
+    filter: grayscale(1);
+    border: none;
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    transition: ease filter, transform 0.3s;
+    cursor: pointer;
+    transform-origin: center;
+    &:hover {
+      filter: grayscale(0);
+      transform: scale(1.1);
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 0.5rem 0;
+    a {
+      &:visited {
+        color: rgb(var(--vs-primary));
+      }
+    }
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Độ mờ 80% */
+  z-index: 999; /* Đảm bảo lớp nền ở phía trên cùng */
+}
+
+#dkhp-xemlichtrungButton {
+  background-color: #e39c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.ctlhp {
+  font-size: 16px;
+  text-align: left;
+}
+
+.ctlhp-bold {
+  font-weight: 700;
+}
+/* Nút đẹp */ 
+.button {
+  --width: 200px;
+  --height: 75px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #222;
+  --tooltip-color: #fff;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: relative;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  
+}
+
+.button::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: #555;
+  font-size: 0.9rem;
+  color: #fff;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: #555;
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button::after,.button::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+  font-size:  22px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button:hover {
+  background: #222;
+}
+
+.button:hover .text {
+  top: -100%;
+}
+
+.button:hover .icon {
+  top: 0;
+}
+
+.button:hover:before,.button:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+

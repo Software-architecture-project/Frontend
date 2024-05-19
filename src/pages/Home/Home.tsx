@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+// Trang chủ
+
+import React from "react";
 import "./index.css";
 import { Layout, Card, Col, Row, Space } from "antd";
 import {
@@ -15,8 +17,8 @@ import {
   download6,
   download7,
   download8,
-} from "assets/icon";
-import { link } from "fs";
+} from "assets/icon"; 
+
 // import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 // import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css.map";
 // import "./../../external_libs/bootstrap-3.3.7/dist/css/bootstrap.min.css";

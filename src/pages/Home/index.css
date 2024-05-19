@@ -252,3 +252,8 @@ s table tbody tr {
   border: 1px solid #ccc;
   border-top: 1px solid black;
 }
+
+body{
+  /* kich thước bằng 80% */
+  zoom:88%;
+}
